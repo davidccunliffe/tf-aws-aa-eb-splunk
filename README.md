@@ -28,7 +28,7 @@ aws iam create-service-linked-role \
      --aws-service-name access-analyzer.amazonaws.com
 ```
 
-
+```bash
 Access-Analyzer finding
             │
   EventBridge →  primary Lambda ────► Splunk
@@ -44,3 +44,4 @@ Access-Analyzer finding
                 replay-Lambda-replay ───► Splunk
                              │
                  if still fails, message stays in DLQ
+```
